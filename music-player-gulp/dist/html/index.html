@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/index.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="song-img">
+            <div class="img-box">
+                <div class="album-pic">
+                    <img class="img" src="" alt="">
+                </div>
+            </div>
+            <!-- 歌曲信息区间 -->
+            <div class="song-info">
+                <!-- <div class="song-name">青柠</div>
+                <div class="singer-name">桃十五</div>
+                <div class="album-name">青柠</div> -->
+            </div>
+            <!-- process进度条部分 -->
+            <div class="process">
+                <div class="process-container">
+                    <div class="time curtime">0:00</div>
+                    <div class="process-wrap">
+                        <div class="slider-bar">
+                            <div class="slider">
+                                <div class="timebtn">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="time totaltime">0:00</div>
+                </div>
+
+            </div>
+            <!-- 按钮控制区 -->
+            <div class="control">
+                <div class="btn like"></div>
+
+                <div class="btn prev"></div>
+                <!-- 加上 pause 实现 变暂停按钮 -->
+                <div class="btn play pause"></div>
+                <div class="btn next"></div>
+                <div class="btn list"></div>
+            </div>
+
+            <div class="song-list">
+                <div class="list-control">
+                    <div class="close-list">X</div>
+                </div>
+                <ul>
+                    
+                </ul>
+            </div>
+        </div>
+        <script src="../js/jquery.js"></script>
+        <script src="../js/variants.js"></script>
+        <script src="../js/gaussBlur.js"></script>
+        <script src="../js/render.js"></script>
+        <script src="../js/audioControl.js"></script>
+        <script src="../js/disk.js"></script>
+        <script src="../js/bindEvents.js"></script>
+        <script src="../js/index.js"></script>
+</body>
+
+</html>

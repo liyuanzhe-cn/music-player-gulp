@@ -1,0 +1,340 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    .wrapper {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+
+        .song-img {
+            position: absolute;
+            height: 50vh;
+            width: 100vw;
+
+
+
+            .img-box {
+                position: absolute;
+                width: 70%;
+                padding-top: 70%;
+                left: 50%;
+                bottom: 2vh;
+                transform: translate(-50%);
+                background-image: radial-gradient(#555, #000);
+                border-radius: 50%;
+                display: flex;
+                // margin: 0 auto;
+                align-items: center;
+                justify-content: center;
+
+                .album-pic {
+                    position: absolute;
+                    left: 6vh;
+                    right: 6vh;
+                    top: 6vh;
+                    bottom: 6vh;
+                    margin: 0;
+                    border-radius: 50%;
+                    background-size: cover;
+                    background-position: center center;
+                    // background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557147106191&di=beda36e75c0602746a03b24635bb3b50&imgtype=0&src=http%3A%2F%2Fimg2.soyoung.com%2Ftieba%2Fweb%2F20190114%2F3%2Fd44d0ec8fe54ed589affa5f8fbf79c3c_570.jpg');
+
+                    .img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            @media screen and (min-width: 450px) {
+                .img-box {
+                    width: 50%;
+                    padding-top: 50%;
+                    left: 50%;
+                }
+            }
+
+            @media screen and (min-width: 700px) and (max-height: 800px) {
+                .img-box {
+                    width: 30%;
+                    padding-top: 30%;
+                    left: 50%;
+                }
+            }
+
+            @media screen and (min-width: 1025px) {
+                .img-box {
+                    width: 27%;
+                    padding-top: 27%;
+                    left: 50%;
+                }
+            }
+
+            @media screen and (min-width: 1025px) {
+                .img-box {
+                    width: 23%;
+                    padding-top: 23%;
+                    left: 50%;
+                }
+            }
+        }
+
+        .song-info {
+            position: absolute;
+            width: 100vw;
+            text-align: center;
+            height: 20vh;
+            top: 50vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            .song-name {
+                font-size: 2em;
+            }
+
+            .singer-name {
+                font-size: 1.5em;
+            }
+
+            .album-name {
+                font-size: 1.2em;
+            }
+
+            @media screen and (min-width: 450px) {
+
+                .song-name {
+                    font-size: 4em;
+                }
+
+                .singer-name {
+                    font-size: 2em;
+                }
+
+                .album-name {
+                    font-size: 1.8em;
+                }
+
+            }
+        }
+
+
+
+        .process {
+            position: absolute;
+            width: 100vw;
+            text-align: center;
+            height: 20vh;
+            top: 70vh;
+            box-sizing: border-box;
+
+            .process-container {
+                display: flex;
+                position: absolute;
+                top: 6vh;
+                width: 100%;
+
+                .time {
+                    width: 15vw;
+                    height: 8vh;
+                    // border: 1px solid black;
+                    line-height: 8vh;
+                    color: white;
+                    text-align: center;
+
+                }
+
+                .process-wrap {
+                    flex: 1;
+                    // border: 1px solid black;
+                    height: 8vh;
+                    position: relative;
+
+                    .slider-bar {
+
+                        height: 0.8vh;
+                        width: 60vw;
+                        position: absolute;
+                        left: 5vw;
+                        top: 3.75vh;
+                        border-radius: 0.5vh;
+                        background-color: white;
+                        opacity: 0.8;
+
+
+                        @media screen and (min-width: 450px) {
+                            height: 0.8vh;
+                        }
+
+                        .slider {
+                            height: 100%;
+                            background-color: silver;
+                            // opacity: 0.8;
+                            border-radius: 0.5vh;
+                            position: relative;
+                            transition: all 0.03s;
+
+                            .timebtn {
+                                height: 2vh;
+                                width: 2vh;
+                                top: -0.6vh;
+                                position: absolute;
+                                right: -1vh;
+                                border-radius: 50%;
+                                background-color: #333;
+                                box-shadow: 0px 0px 3px 3px white;
+                                opacity: 1;
+
+                            }
+                        }
+                    }
+                }
+
+                @media screen and (min-width: 450px) {
+                    .time {
+                        font-size: 1.5em;
+                    }
+                }
+
+                @media screen and (min-width: 750px) {
+                    .time {
+                        font-size: 1.8em;
+                    }
+                }
+
+                @media screen and (min-width: 900px) {
+                    .time {
+                        font-size: 2em;
+                    }
+                }
+            }
+        }
+
+        .control {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            height: 10vh;
+            background-color: black;
+            opacity: 0.8;
+            top: 90vh;
+            display: flex;
+
+            .btn {
+                height: 100%;
+                flex: 1;
+                background-repeat: no-repeat;
+                background-size: 30%;
+                background-position: center center;
+            }
+
+            @media screen and (min-width: 450px) {
+                .btn {
+                    background-size: 25%;
+                }
+            }
+
+            @media screen and (min-width: 750px) {
+                .btn {
+                    background-size: 18%;
+                }
+            }
+
+            @media screen and (min-width: 900px) and (min-height: 1000px) {
+                .btn {
+                    background-size: 18%;
+                }
+            }
+
+            @media screen and (min-width: 900px)and (max-height: 1000px) {
+                .btn {
+                    background-size: 10%;
+                }
+            }
+
+            .like {
+                background-image: url('../images/icon-like.png');
+
+                &.liking {
+                    background-image: url('../images/icon-like-solid.png');
+                }
+            }
+
+            .prev {
+                background-image: url('../images/icon-prev.png')
+            }
+
+            .play {
+                background-image: url('../images/icon-pause.png');
+
+                &.pause {
+                    background-image: url('../images/icon-play.png');
+
+                }
+            }
+
+            .next {
+                background-image: url('../images/icon-next.png')
+            }
+
+            .list {
+                background-image: url('../images/icon-list.png')
+            }
+        }
+
+        .song-list {
+            width: 100%;
+            color: #000;
+            max-height: 50vh;
+            position: absolute;
+            background-color: aliceblue;
+            opacity: 0.8;
+            top: 100vh;
+            transition: all 0.3s ease;
+
+            .list-control {
+                width: 100%;
+                height: 8vh;
+                border-bottom: 1px solid #888;
+
+                .close-list {
+                    width: 8vh;
+                    line-height: 8vh;
+                    font-size: 1.5em;
+                    text-align: center;
+                    float: right;
+                }
+            }
+
+            ul {
+                width: 100%;
+
+                li {
+                    text-align: center;
+                    height: 8vh;
+                    line-height: 8vh;
+                    font-weight: bold;
+                    border-bottom: 1px solid #ccc;
+
+                }
+            }
+        }
+    }
+}
+
+/*移动端绘制圆形
+padding-top的百分比高度采用的是可视区宽度的比例
+*/
+
+/*
+margin:0 auto;
+失效条件
+display:inline-block;
+float
+display:table-cell;
+position：absolute
+*/
