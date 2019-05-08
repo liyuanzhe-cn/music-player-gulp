@@ -6,18 +6,19 @@ gulp + 面向对象 + 异步回调 + fs模块模拟数据库项目
 
 fs模块通过writeFile， readFile模拟数据库， 
 
+<hr />
+注意事项:
 <h3>gulp 抽风的解决办法</h3>
-gulp会经常抽风，修改路径名之类的会不停报错，我的文件拿到手之后建议按照如下步骤操作：
- * gulp在绝对路径发生改变时会抽风， 不是我写的bug
- * 可以
+gulp会经常抽风，修改路径名之类的会不停告诉你缺东西，我的文件拿到手之后建议按照如下步骤操作：
+ * gulp在绝对路径发生改变时会抽风。
  * 1.删除除了src和gulpfile。package.json之外的所有文件夹，
- * 改名备份 package.json文件夹， 
- * 从新npm init 再吧package.json的 包依赖 和 script 复制回去 ，
- * 再 npm i
- * 再 gulp 执行
+ * 2.改名备份 package.json文件夹， 
+ * 3.重新npm init 再吧package.json的 包依赖 和 script 复制回去 ，
+ * 4.再 npm i
+ * 5.再 gulp 执行
+ <hr />
  
- 
- 全局只做了一个player对象， 各种功能在该对象上面进行扩展，保证项目的可维护性
+全局只做了一个player对象， 各种功能在该对象上面进行扩展，保证项目的可维护性
 
 核心， 除了主入口index.js， 每一个js文件都这么写
 **禁止使用异步async， await， 避免index.js 先于依赖模块加载出来**
