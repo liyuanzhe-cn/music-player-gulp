@@ -4,8 +4,7 @@
 
 gulp + 面向对象 + 异步回调 + fs模块模拟数据库项目
 
-fs模块通过writeFile， readFile 模拟数据库， 
-**前端点赞 -> ajax -> 后端读取前端发过来的内容 -> promise -> writeFile -> 写入成功 -> 执行promise.resolve -> 读取文件 -> 发送给前端。 **
+fs模块通过writeFile， readFile模拟数据库， 
 
 <h3>gulp 抽风的解决办法</h3>
 gulp会经常抽风，修改路径名之类的会不停报错，我的文件拿到手之后建议按照如下步骤操作：
@@ -35,7 +34,7 @@ gulp会经常抽风，修改路径名之类的会不停报错，我的文件拿�
 
 ```
 
-所有非主入口文件，暴露借口都是 function( data数据， player对象 )，
+所有非主入口文件，暴露接口都是 **function( data数据， player对象 )**，
 这样在后期维护和扩展上会更加的方便和容易。
 
 开发使用less + es6；
@@ -64,7 +63,8 @@ gulp会经常抽风，修改路径名之类的会不停报错，我的文件拿�
 ```
 
 
-**数据库的模拟方法**
+**数据库的模拟方法，实现持久层，避免每次刷新数据数据都会还原*
+**前端点赞 -> ajax -> 后端读取前端发过来的内容 -> promise -> writeFile -> 写入成功 -> 执行promise.resolve -> 读取文件 -> 发送给前端。 **
 ```
 router.post('/changeLike', (req, res) => {
     console.log(req.body);
