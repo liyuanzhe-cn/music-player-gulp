@@ -5,7 +5,7 @@
 gulp + 面向对象 + 异步回调 + fs模块模拟数据库项目
 
 fs模块通过writeFile， readFile 模拟数据库， 
-前端点赞 -> ajax -> 后端读取前端发过来的内容 -> promise -> writeFile -> 写入成功 -> 执行promise.resolve -> 读取文件 -> 发送给前端。 
+**前端点赞 -> ajax -> 后端读取前端发过来的内容 -> promise -> writeFile -> 写入成功 -> 执行promise.resolve -> 读取文件 -> 发送给前端。 **
 
 <h3>gulp 抽风的解决办法</h3>
 gulp会经常抽风，修改路径名之类的会不停报错，我的文件拿到手之后建议按照如下步骤操作：
@@ -61,6 +61,28 @@ gulp会经常抽风，修改路径名之类的会不停报错，我的文件拿�
     "gulp": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+```
+
+
+**数据库的模拟方法**
+```
+router.post('/changeLike', (req, res) => {
+    console.log(req.body);
+    res.header("Access-Control-Allow-Origin", "*");
+    new Promise((resolve, reject) => {
+    //接收数据， 写入并存储文件
+        fs.writeFile('./fakeDB/onlineMP3-1.json', req.body.data, { encoding: 'utf-8' }, (err, data) => {
+            err ? reject(err) : resolve(data);
+        })
+    }).then((data) => {
+    //写入完成之后，再读取文件，再发送给前端
+        fs.readFile('./fakeDB/onlineMP3-1.json', { encoding: 'utf-8' }, (err, data) => {
+            err ? console.log(err) : res.send(data);
+        })
+    }).catch((err) => {
+        console.log(err)
+    })
+})
 ```
 
 
